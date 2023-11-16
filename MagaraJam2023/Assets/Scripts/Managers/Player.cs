@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     {
         Ui();
         Movement();
+        Interact();
     }
 
     void Ui()
@@ -41,6 +42,19 @@ public class Player : MonoBehaviour
 
         transform.Rotate(new Vector3(0, horizontal, 0));
         transform.Translate(new Vector3(0, 0, vertical));
+    }
+
+    void Interact()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.forward,out hit, 8) && hit.collider.TryGetComponent<Interactable>(out Interactable interactable))
+            {
+                interactable.Interact();
+            }
+        }
     }
 
     public void Damage(float damage)
