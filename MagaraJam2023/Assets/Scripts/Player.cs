@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public float Health, MovementSpeed, RotationSpeed;
 
+    public AudioSource[] Sounds;
+
     Slider healthBar;
 
     private void Awake()
@@ -39,5 +41,16 @@ public class Player : MonoBehaviour
 
         transform.Rotate(new Vector3(0, horizontal, 0));
         transform.Translate(new Vector3(0, 0, vertical));
+    }
+
+    public void Damage(float damage)
+    {
+        Sounds[0].Play();
+        Health -= damage;
+    }
+    
+    public void Heal(float heal)
+    {
+        Health += heal;
     }
 }
