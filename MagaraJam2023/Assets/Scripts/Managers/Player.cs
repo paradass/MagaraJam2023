@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
 
-    public float Health, MovementSpeed, RotationSpeed;
+    public float Health, MovementSpeed, RotationSpeed,AttackSpeed;
     public GameObject[] Objects;
     public AudioSource[] Sounds;
 
     [System.NonSerialized] public int WheelCount;
 
+    float attackTimer;
     Slider healthBar;
 
     private void Awake()
@@ -30,11 +32,14 @@ public class Player : MonoBehaviour
         Ui();
         Movement();
         Interact();
+        Attack();
     }
 
     void Ui()
     {
         healthBar.value = Health;
+
+        if (Health <= 0) SceneManager.LoadScene(0);
     }
 
     void Movement()
@@ -52,10 +57,20 @@ public class Player : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward,out hit, 8) && hit.collider.TryGetComponent<Interactable>(out Interactable interactable))
+            if (Physics.Raycast(transform.position, transform.forward,out hit, 5) && hit.collider.TryGetComponent<Interactable>(out Interactable interactable))
             {
                 interactable.Interact();
             }
+        }
+    }
+
+    void Attack()
+    {
+        if (Input.GetKey(KeyCode.Tab) && Time.time >= attackTimer)
+        {
+            if (!Sounds[2].isPlaying) Sounds[2].Play();
+            attackTimer = Time.time+AttackSpeed;
+            Destroy(Instantiate(Objects[2], Objects[1].transform.position, transform.rotation), 5);
         }
     }
 

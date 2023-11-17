@@ -13,5 +13,9 @@ public class Trap : MonoBehaviour
             Player.Instance.Damage(Damage);
             Destroy(gameObject);
         }
+        if (other.TryGetComponent<FireBall>(out FireBall fireBall))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
