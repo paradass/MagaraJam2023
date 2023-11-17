@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Wheel : MonoBehaviour
 {
-    public float RotationSpeed;
-
-    private void Update()
-    {
-        transform.Rotate(new Vector3(0, RotationSpeed * Time.deltaTime, 0));
-    }
 
     private void OnTriggerEnter(Collider other)
     {
