@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3055002398364048255}
   - component: {fileID: 5884010483763507829}
+  - component: {fileID: 82867462621024599}
   - component: {fileID: 1526801168702395579}
   - component: {fileID: 7836045386273423306}
-  - component: {fileID: 82867462621024599}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -59,6 +59,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &82867462621024599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330864262699320794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67288c01e9c9bc843af36384615d2a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1526801168702395579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,20 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84da85a51728100488fc30d30120b787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SubtitleTime: 3
+  SubtitleTime: 2
   SubtitleText: "Bu kapan olamaz \xE7\xFCnk\xFC benzemiyor."
---- !u!114 &82867462621024599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330864262699320794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67288c01e9c9bc843af36384615d2a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2598103450639553764
 GameObject:
   m_ObjectHideFlags: 0

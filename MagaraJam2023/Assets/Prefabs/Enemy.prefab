@@ -93,8 +93,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8386137088128992205}
-  - component: {fileID: 4643433791198096565}
   - component: {fileID: 2749496176962417943}
+  - component: {fileID: 4643433791198096565}
+  - component: {fileID: -2545909551518746335}
   - component: {fileID: 6757158278495927662}
   - component: {fileID: -8544891070236076312}
   m_Layer: 0
@@ -120,6 +121,18 @@ Transform:
   - {fileID: 5594203798897177568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2749496176962417943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578091042973761661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67288c01e9c9bc843af36384615d2a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4643433791198096565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 20
---- !u!114 &2749496176962417943
+--- !u!114 &-2545909551518746335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +155,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7578091042973761661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67288c01e9c9bc843af36384615d2a89, type: 3}
+  m_Script: {fileID: 11500000, guid: 84da85a51728100488fc30d30120b787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SubtitleTime: 1
+  SubtitleText: "Polisi \xE7a\u011F\u0131r\u0131n imdat."
 --- !u!136 &6757158278495927662
 CapsuleCollider:
   m_ObjectHideFlags: 0
