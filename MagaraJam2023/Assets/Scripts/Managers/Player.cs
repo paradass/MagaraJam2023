@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         transform.Rotate(new Vector3(0, horizontal, 0));
         transform.Translate(new Vector3(0, 0, vertical));
 
-        if(transform.position.y < -2) SceneManager.LoadScene(0);
+        if(transform.position.y < -2 || Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
     }
 
     void Interact()
