@@ -8,8 +8,10 @@ public class Player : MonoBehaviour
     public static Player Instance;
 
     public float Health, MovementSpeed, RotationSpeed;
-
+    public GameObject[] Objects;
     public AudioSource[] Sounds;
+
+    [System.NonSerialized] public int WheelCount;
 
     Slider healthBar;
 
@@ -66,5 +68,18 @@ public class Player : MonoBehaviour
     public void Heal(float heal)
     {
         Health += heal;
+    }
+
+    public void AddWheel(int count)
+    {
+        Sounds[1].Play();
+        WheelCount += count;
+        Objects[0].SetActive(true);
+    }
+
+    public void DelWheel(int count)
+    {
+        WheelCount -= count;
+        Objects[0].SetActive(false);
     }
 }
