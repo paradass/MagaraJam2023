@@ -611,10 +611,28 @@ MonoBehaviour:
   - Makineyi alt ettin!
   - Peki sence bu iyi mi?
   - HAYIR!
+  - "Asla anlamayaca\u011F\u0131n \u015Feyler var."
+  - "Sana anlatmakla u\u011Fra\u015Fmicam"
+  - "Yaz\u0131m kurallar\u0131"
+  - "Ve ba\u015Fka sa\xE7mal\u0131klar.."
+  - "\xC7ok felsefi bir yakla\u015F\u0131m"
+  - "Ho\u015F olmaz."
+  - "\u015Eimdi git"
+  - "HAD\u0130 G\u0130T"
+  - Defol.
   Times:
   - 1.5
   - 2
   - 2
+  - 1
+  - 1
+  - 2
+  - 2
+  - 2
+  - 2
+  - 1
+  - 1
+  - 1
   - 1
 --- !u!4 &1772845356
 Transform:

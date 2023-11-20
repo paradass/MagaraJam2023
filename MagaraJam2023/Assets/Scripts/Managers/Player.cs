@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [System.NonSerialized] public int WheelCount;
 
     float attackTimer;
+    Animator animator;
     Slider healthBar;
 
     private void Awake()
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        animator = transform.GetChild(0).GetComponent<Animator>();
         healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
     }
 
@@ -50,7 +52,10 @@ public class Player : MonoBehaviour
         transform.Rotate(new Vector3(0, horizontal, 0));
         transform.Translate(new Vector3(0, 0, vertical));
 
-        if(transform.position.y < -2 || Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
+        if (vertical == 0) animator.SetInteger("State", 0);
+        else animator.SetInteger("State", 1);
+
+        if (transform.position.y < -2 || Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
     }
 
     void Interact()
